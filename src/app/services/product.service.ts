@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { data } from '../MockData';
+import { Data } from '../MockData';
 import { Product } from '../Product';
 
 @Injectable()
 export class ProductService {
-  products = data;
+  products = Data;
 
   constructor() { }
   getProducts(){ // Lay danh sach san pham

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Data} from '../MockData';
+import { Product } from '../Product';
+import { ProductService } from '../services/product.service'
 
 @Component({
   selector: 'app-qlsp',
@@ -7,13 +8,15 @@ import {Data} from '../MockData';
   styleUrls: ['./qlsp.component.css']
 })
 export class QlspComponent implements OnInit {
+  products: Product[];
+  constructor(
+    private productService: ProductService
+  ) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
   }
-products = Data;
   removeItem(id){
-    this.products = this.products.filter(product => product.id != id);
+    this.products = this.productService.removeProduct(id);
   }
 }
