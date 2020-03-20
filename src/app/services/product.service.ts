@@ -13,8 +13,8 @@ export class ProductService {
   getProduct(){ // Chi tiet san pham
 
   }
-  removeProduct(id){ // Xoa san pham
-    return this.products = this.products.filter(product => product.id != id)
+  removeProduct(){ // Xoa san pham
+
   }
   addProduct(product){ // them san pham
     let newObj = { id: 6, ...product};
