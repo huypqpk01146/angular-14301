@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { QlspComponent } from './qlsp/qlsp.component';
 import { ProductService } from './services/product.service';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 const routes: Routes =[
 {path: '',component: HomeComponent},
 {path: 'home',component: HomeComponent},
@@ -21,7 +22,7 @@ const routes: Routes =[
 @NgModule({
   imports:      [ BrowserModule, FormsModule,RouterModule.forRoot(routes) ],
   exports:[RouterModule],
-  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, HomeComponent, QlspComponent, ProductDetailComponent ],
+  declarations: [ AppComponent, HelloComponent, ProductComponent, ProductListComponent, SlideComponent, CategoryComponent, HomeComponent, QlspComponent, ProductDetailComponent, ProductAddComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
