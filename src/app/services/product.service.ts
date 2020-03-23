@@ -10,8 +10,8 @@ export class ProductService {
   getProducts(){ // Lay danh sach san pham
       return this.products;
   }
-  getProduct(){ // Chi tiet san pham
-
+  getProduct(id){ // Chi tiet san pham
+     return this.products.find(product => product.id == id);
   }
   removeProduct(){ // Xoa san pham
 
